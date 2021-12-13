@@ -7,8 +7,6 @@ const config = {
 };
 const CRYPTOPUNK_CONTRACT_ADDRESS =
   "0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB";
-const INNER_CIRCLE_CONTRACT_ADDRESS =
-  "0x36d30B3b85255473D27dd0F7fD8F35e36a9d6F06";
 
 class DefaultDict {
   constructor(defaultVal) {

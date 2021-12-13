@@ -68,7 +68,6 @@ function findMissingTokens(tokens, range) {
       notThere.push(iStr);
     }
   }
-  //console.log("notThere: ", notThere);
   return notThere;
 }
 
@@ -127,17 +126,11 @@ async function getHoldersOfNFT(contractAddr, numberOfTokens) {
   // Log and Return table and summary statistics.
   console.log("\n  ****** END VALUES ******** \n");
   console.log("holderToCountTable at end: ", holderToCountTable);
-  console.log(
-    "number of unique holders: ",
-    Object.keys(holderToCountTable).length
-  );
-  //console.log("tokenIdToSeenCount: ", tokenIdToSeenCount);
-  console.log(
-    "number of tokens accounted for: ",
-    Object.keys(tokenIdToSeenCount).length
-  );
+  console.log("number of unique holders: ", Object.keys(holderToCountTable).length);
+  console.log("number of tokens accounted for: ", Object.keys(tokenIdToSeenCount).length);
+
   var missingTokens = findMissingTokens(tokenIdToSeenCount, numberOfTokens);
   console.log("missingTokens: ", missingTokens);
   return holderToCountTable;
 }
-getHoldersOfNFT(CRYPTOPUNK_CONTRACT_ADDRESS, 10000);
+//getHoldersOfNFT(CRYPTOPUNK_CONTRACT_ADDRESS, 10000);
